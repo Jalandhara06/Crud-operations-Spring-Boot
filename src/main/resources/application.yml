@@ -1,14 +1,16 @@
+server:
+  port: ${SERVER_PORT}
+
 spring:
   application:
-    name: crud-operations
+    name: ${SPRING_APPLICATION_NAME}
   datasource:
-    url : jdbc:postgresql://localhost:5432/demopost
-    username : postgres
-    password : admin
+    url : ${SPRING_DATASOURCE_URL}
+    username : ${SPRING_DATASOURCE_USERNAME}
+    password : ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto : update
-    show-sql : true
-#spring.jpa.properties.hibernate.generate_statistics=true
-#logging.level.org.hibernate.stat=debug
+      ddl-auto : ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql : ${SPRING_JPA_SHOW_SQL}
+
 
